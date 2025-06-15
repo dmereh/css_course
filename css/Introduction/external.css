@@ -1,0 +1,12 @@
+body{background-color: bisque;}
+
+h1 {
+    color: orange !important;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 20px;
+    color: teal;
+  }
+  

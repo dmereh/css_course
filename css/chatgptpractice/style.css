@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fdfdfd;
+  }
+  
+  header {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    padding: 20px 0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    background: #43cea2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .services {
+    background: #f3f9ff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #185a9d;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: #43cea2;
+    margin-bottom: 10px;
+  }
+  
+  .contact {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    color: #185a9d;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  
+  button {
+    background: #185a9d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #0f3c6d;
+  }
+  
+  .map {
+    padding: 60px 20px;
+    background: #e0f7fa;
+    text-align: center;
+  }
+  
+  .map h2 {
+    color: #185a9d;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background: #185a9d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
