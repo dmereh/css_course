@@ -1,0 +1,93 @@
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    color: #34495e;
+  }
+  
+  .box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Border Examples */
+  .border-width {
+    border-width: 5px 10px 2px 1px;
+  }
+  
+  .border-style {
+    border-style: solid dashed dotted double;
+  }
+  
+  .border-color {
+    border-color: #e74c3c #3498db #2ecc71 #f1c40f;
+  }
+  
+  .border-shorthand {
+    border: 4px dashed #9b59b6;
+  }
+  
+  .border-radius {
+    border-radius: 20px;
+  }
+  
+  /* Outline Examples */
+  .outline-width {
+    outline: solid;
+    outline-width: 6px;
+  }
+  
+  .outline-style {
+    outline: dashed;
+    outline-width: 3px;
+    outline-color: #2980b9;
+  }
+  
+  .outline-color {
+    outline: solid;
+    outline-width: 4px;
+    outline-color: #e67e22;
+  }
+  
+  .outline-shorthand {
+    outline: 5px dotted #8e44ad;
+  }
+  
+  .outline-offset {
+    outline: 3px solid #16a085;
+    outline-offset: 10px;
+  }
+  
