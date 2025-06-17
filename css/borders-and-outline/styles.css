@@ -10,11 +10,12 @@ border: solid 20px lightblue;
 outline-style:solid;
 outline-width: 10px;
 outline-color:darkblue;
-outline-offset: 10px;
+/* outline-offset: 10px; */
 
 }
 
-body{padding: 50px;
-
+body{padding top; 30px;
+    padding right; 15px;
+    
 
 }
