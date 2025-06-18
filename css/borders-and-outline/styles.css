@@ -1,21 +1,14 @@
-div{background-color: darkblue;
-height: 300px;
-width: 300px;
-color: white;
-border-radius: 20px;
+div {
+  background-color: darkblue;
+  height: 300px;
+  width: 300px;
+  color: white;
+  border-radius: 20px;
 
-border: solid 20px lightblue;
+  border: solid 20px lightblue;
 
-
-outline-style:solid;
-outline-width: 10px;
-outline-color:darkblue;
-/* outline-offset: 10px; */
-
-}
-
-body{padding top; 30px;
-    padding right; 15px;
-    
-
+  outline-style: solid;
+  outline-width: 10px;
+  outline-color: darkblue;
+  /* outline-offset: 10px; */
 }
