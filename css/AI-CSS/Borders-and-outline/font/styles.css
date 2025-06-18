@@ -1,0 +1,69 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    padding: 40px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  
+  .example {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #9b59b6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .example:hover {
+    transform: scale(1.02);
+  }
+  
+  .example span {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.1em;
+  }
+  
+  /* Font Property Examples */
+  .font-family span {
+    font-family: 'Brush Script MT', cursive;
+  }
+  
+  .font-style span {
+    font-style: italic;
+  }
+  
+  .font-size span {
+    font-size: 24px;
+  }
+  
+  .font-variant span {
+    font-variant: small-caps;
+  }
+  
+  .font-weight span {
+    font-weight: bold;
+  }
+  
+  .line-height span {
+    line-height: 2;
+  }
+  
+  .font-shorthand span {
+    font: italic small-caps bold 20px 'Georgia', serif;
+  }
+  
