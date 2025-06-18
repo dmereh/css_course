@@ -1,0 +1,66 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 40px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  
+  .example {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .example:hover {
+    transform: scale(1.02);
+  }
+  
+  .example span {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.1em;
+  }
+  
+  /* Text Formatting Examples */
+  .text-color span {
+    color: blue;
+  }
+  
+  .text-align span {
+    text-align: left;
+    display: block;
+  }
+  
+  .text-decoration span {
+    text-decoration: underline;
+  }
+  
+  .text-transform span {
+    text-transform: uppercase;
+  }
+  
+  .text-indent span {
+    text-indent: 50px;
+  }
+  
+  .text-shadow span {
+    text-shadow: 2px 2px 5px red;
+  }
+  

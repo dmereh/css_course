@@ -1,7 +1,7 @@
 div {
   background-color: darkblue;
   height: 300px;
-  width: 300px;
+  width: 340px;
   color: white;
   border-radius: 20px;
 
@@ -11,8 +11,10 @@ div {
   outline-width: 10px;
   outline-color: darkblue;
   /* outline-offset: 10px; */
-}
 
-body {
-  padding: 50px;
+padding: 15px;
+
+margin: 15px;
+
+display: inline-block;
 }
