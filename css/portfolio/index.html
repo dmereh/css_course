@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deeqa Mereh | Developer Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Deeqa Mereh</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#blog">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="home">
-    <div class="home-content">
-      <img src="profile.jpg" alt="Deeqa Mereh" class="profile-pic" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deeqa Mereh - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      img {
+        margin-left: 310px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
       <h1>Deeqa Mereh</h1>
-      <p>A passionate junior developer with a thirst for continuous learning and building impactful digital experiences.</p>
-    </div>
-  </section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about/about.html">About</a></li>
+          <li><a href="projects/projects.html">Projects</a></li>
+          <li><a href="blog/blog.html">Blog</a></li>
+          <li><a href="contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <img src="images/Image profile.png" alt="Deeqa Mereh" />
+        
+      </section>
+      <article>
+        <h2></h2>
+        <p>
+          I'm a junior developer passionate about crafting beautiful, accessible
+          websites. I'm currently learning full-stack development and excited to
+          share my journey with the world.
+        </p>
+      </article>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Built with HTML, CSS, and JavaScript to showcase my skills and growth.</p>
-      </div>
-      <div class="project-card">
-        <h3>To-Do App</h3>
-        <p>A task management tool with local storage and smooth UI interactions.</p>
-      </div>
-    </div>
-  </section>
+      <section class="highlight">
+        <h2>What I Do</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Frontend Development</h3>
+            <p>
+              Creating responsive, user-friendly interfaces using HTML, CSS, and
+              JavaScript.
+            </p>
+            <br>
+          </div>
+          <div class="card">
+            <h3>Learning Full-Stack</h3>
+            <p>
+              Currently diving into Node.js, Express, and MongoDB to build
+              complete web apps.
+            </p>
+            <br>
+          </div>
+          <div class="card">
+            <h3>Creative Projects</h3>
+            <p>
+              Building cool projects like to-do lists, mini-games, and portfolio
+              websites.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a junior developer with a strong interest in front-end development and design. I enjoy creating elegant, responsive, and user-friendly applications. Currently enhancing my skills in JavaScript, React, and back-end development.</p>
-    <h3>My Learning Roadmap</h3>
-    <ul>
-      <li>✔️ HTML, CSS, JavaScript</li>
-      <li>✅ Responsive Design</li>
-      <li>🟡 React.js</li>
-      <li>🟡 Git & GitHub</li>
-      <li>🟡 Node.js & Express</li>
-      <li>⬜ MongoDB & Full Stack Development</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me via email: <a href="mailto:deeqa@example.com">deeqa@example.com</a></p>
-    <div id="map"></div>
-  </section>
-
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>Coming soon: My thoughts, learnings, and reflections on my journey as a developer.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Deeqa Mereh. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+      <section class="cta">
+        <h2>Explore My Work</h2>
+        <p>
+          Take a look at my latest projects, blog posts, and roadmap to becoming
+          a full-stack developer.
+        </p>
+        <a class="button" href="projects/projects.html">View Projects</a>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Deeqa Mereh</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
