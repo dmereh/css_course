@@ -11,5 +11,5 @@ firstName = "Muna"
 console.log(firstName)
 
 const lastName = "Mereh"
-lastName = "Ali"
-console.log(firstName)s
+lastName = "Ali" //This would not work as the const is in place
+console.log(lastName)

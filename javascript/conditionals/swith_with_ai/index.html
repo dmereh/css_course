@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UK School Year Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    label, input, button {
+      display: block;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>UK School Year Finder</h1>
+
+  <label for="ageInput">Enter student's age:</label>
+  <input type="number" id="ageInput" min="0" placeholder="e.g. 10">
+
+  <button onclick="findSchoolYear()">Find School Year</button>
+
+  <p id="result"></p>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
