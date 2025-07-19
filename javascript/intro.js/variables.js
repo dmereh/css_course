@@ -20,3 +20,6 @@
 //  console.log(typeof firstName)
 
 
+var firstName = null //declaring a variable, Null used as a placeholder
+// firstName = "Deeqa" //assigning a value to the variable, initialising the value
+console.log(firstName)
