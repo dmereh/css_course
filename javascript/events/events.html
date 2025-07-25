@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onmouseleave="changeBackgroundBack()" onmouseover="changeBackground()">
+        click to red
+    </button>
+     <!-- <button onclick="changeBackgroundBack()">
+        click to white
+    </button> -->
+    <script>
+        function changeBackground(){
+            document.body.style.background = "red";
+        }
+        function changeBackgroundBack(){
+            document.body.style.background = "blue";
+        }
+    </script>
+</body>
+</html>
