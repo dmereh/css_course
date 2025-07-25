@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .theBigText{
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="unluckyOne">I love London (i wrote this code manually)</h1>
+    <h1 name="bigCity" class="theBigText">The other big city</h1>
+    <h1 name="bigCity" class="theBigText">The other big city</h1>
+
+    <script>
+      for (let i = 0; i < 2; i++) {
+        let anotherH1 = document.createElement("h1");
+        anotherH1.textContent =
+          "I love London (i wrote this code in javascript)";
+        anotherH1.style.color = "blue";
+        document.body.appendChild(anotherH1);
+      }
+
+      let anotherP = document.createElement("p");
+      anotherP.textContent = "I love London (i wrote this code in javascript)";
+      anotherP.style.color = "red";
+      document.body.appendChild(anotherP);
+      //document.body.removeChild(anotherP) // to remove the element
+
+      let h1 = document.getElementById("unluckyOne");
+      // document.body.removeChild(h1)
+      h1.style.color = "green";
+      h1.innerHTML = "This has been changed <p> hello world </p>"; // to add html content
+
+    //   let h1s = document.getElementsByName("bigCity"); // get elements by name (multiple elements)
+    //   for (let i = 0; i < h1s.length; i++) {
+    //      h1s[i].style.color = "yellow";
+    //   }
+
+
+    //  let h1s = document.getElementsByTagName("h1"); //get elements by TagName
+    //   for (let i = 0; i < h1s.length; i++) {
+    //      h1s[i].style.color = "brown";
+    //   }
+
+    // let h1s = document.getElementsByClassName("theBigText"); //get elements by ClassName
+    //   for (let i = 0; i < h1s.length; i++) {
+    //      h1s[i].style.color = "purple";
+    //   }
+
+      let h1s = document.querySelectorAll(".theBigText"); //get elements with querySelectorAll
+      for (let i = 0; i < h1s.length; i++) {
+         h1s[i].style.color = "pink";
+      }
+
+      let unluckyOne = document.querySelector("#unluckyOne"); //get elements with querySelector
+      unluckyOne.style.color = "orange";
+
+    </script>
+  </body>
+</html>
