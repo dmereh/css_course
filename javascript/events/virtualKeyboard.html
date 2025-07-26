@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Events</title>
+  <style>
+    .keyboard {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      gap: 10px;
+      max-width: 500px;
+      margin: 50px auto;
+    }
+
+    .key {
+      padding: 10px;
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      font-family: monospace;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    .pressed {
+      background-color: #4caf50;
+      color: white;
+      border-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="keyboard" id="keyboard">
+    <!-- Keys A to Z -->
+    <div class="key" data-key="A">A</div>
+    <div class="key" data-key="B">B</div>
+    <div class="key" data-key="C">C</div>
+    <div class="key" data-key="D">D</div>
+    <div class="key" data-key="E">E</div>
+    <div class="key" data-key="F">F</div>
+    <div class="key" data-key="G">G</div>
+    <div class="key" data-key="H">H</div>
+    <div class="key" data-key="I">I</div>
+    <div class="key" data-key="J">J</div>
+    <div class="key" data-key="K">K</div>
+    <div class="key" data-key="L">L</div>
+    <div class="key" data-key="M">M</div>
+    <div class="key" data-key="N">N</div>
+    <div class="key" data-key="O">O</div>
+    <div class="key" data-key="P">P</div>
+    <div class="key" data-key="Q">Q</div>
+    <div class="key" data-key="R">R</div>
+    <div class="key" data-key="S">S</div>
+    <div class="key" data-key="T">T</div>
+    <div class="key" data-key="U">U</div>
+    <div class="key" data-key="V">V</div>
+    <div class="key" data-key="W">W</div>
+    <div class="key" data-key="X">X</div>
+    <div class="key" data-key="Y">Y</div>
+    <div class="key" data-key="Z">Z</div>
+    <!-- You can add more keys like numbers, arrows, etc. -->
+  </div>
+
+  <script>
+    const keys = document.querySelectorAll(".key");
+
+    document.addEventListener("keydown", (event) => {
+      const key = event.key.toUpperCase();
+      const keyDiv = document.querySelector(`.key[data-key="${key}"]`);
+      if (keyDiv) {
+        keyDiv.classList.add("pressed");
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      const key = event.key.toUpperCase();
+      const keyDiv = document.querySelector(`.key[data-key="${key}"]`);
+      if (keyDiv) {
+        keyDiv.classList.remove("pressed");
+      }
+    });
+  </script>
+
+</body>
+</html>

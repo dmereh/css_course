@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Country Selector with Flags</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .flag {
+      width: 80px;
+      height: 50px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="countrySelect">Select a country in Africa:</label><br><br>
+  <select id="countrySelect">
+    <option value="">--Choose a country--</option>
+    <option value="DZ">Algeria</option>
+    <option value="AO">Angola</option>
+    <option value="BJ">Benin</option>
+    <option value="BW">Botswana</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="CV">Cabo Verde</option>
+    <option value="CM">Cameroon</option>
+    <option value="CF">Central African Republic</option>
+    <option value="TD">Chad</option>
+    <option value="KM">Comoros</option>
+    <option value="CG">Congo (Brazzaville)</option>
+    <option value="CD">Congo (Kinshasa)</option>
+    <option value="DJ">Djibouti</option>
+    <option value="EG">Egypt</option>
+    <option value="GQ">Equatorial Guinea</option>
+    <option value="ER">Eritrea</option>
+    <option value="SZ">Eswatini</option>
+    <option value="ET">Ethiopia</option>
+    <option value="GA">Gabon</option>
+    <option value="GM">Gambia</option>
+    <option value="GH">Ghana</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-Bissau</option>
+    <option value="CI">Ivory Coast</option>
+    <option value="KE">Kenya</option>
+    <option value="LS">Lesotho</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libya</option>
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malawi</option>
+    <option value="ML">Mali</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauritius</option>
+    <option value="MA">Morocco</option>
+    <option value="MZ">Mozambique</option>
+    <option value="NA">Namibia</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="RW">Rwanda</option>
+    <option value="ST">Sao Tome and Principe</option>
+    <option value="SN">Senegal</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leone</option>
+    <option value="SO">Somalia</option>
+    <option value="XS">Somaliland</option> <!-- Custom code for Somaliland -->
+    <option value="ZA">South Africa</option>
+    <option value="SS">South Sudan</option>
+    <option value="SD">Sudan</option>
+    <option value="TZ">Tanzania</option>
+    <option value="TG">Togo</option>
+    <option value="TN">Tunisia</option>
+    <option value="UG">Uganda</option>
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabwe</option>
+  </select>
+
+  <div id="result"></div>
+  <div id="flag" class="flag"></div>
+
+  <script>
+    const select = document.getElementById("countrySelect");
+    const result = document.getElementById("result");
+    const flag = document.getElementById("flag");
+
+    const countryNames = {
+      "XS": "Somaliland", // Not ISO, custom
+      "DZ": "Algeria", "AO": "Angola", "BJ": "Benin", "BW": "Botswana", "BF": "Burkina Faso",
+      "BI": "Burundi", "CV": "Cabo Verde", "CM": "Cameroon", "CF": "Central African Republic",
+      "TD": "Chad", "KM": "Comoros", "CG": "Congo (Brazzaville)", "CD": "Congo (Kinshasa)",
+      "DJ": "Djibouti", "EG": "Egypt", "GQ": "Equatorial Guinea", "ER": "Eritrea",
+      "SZ": "Eswatini", "ET": "Ethiopia", "GA": "Gabon", "GM": "Gambia", "GH": "Ghana",
+      "GN": "Guinea", "GW": "Guinea-Bissau", "CI": "Ivory Coast", "KE": "Kenya",
+      "LS": "Lesotho", "LR": "Liberia", "LY": "Libya", "MG": "Madagascar", "MW": "Malawi",
+      "ML": "Mali", "MR": "Mauritania", "MU": "Mauritius", "MA": "Morocco", "MZ": "Mozambique",
+      "NA": "Namibia", "NE": "Niger", "NG": "Nigeria", "RW": "Rwanda", "ST": "Sao Tome and Principe",
+      "SN": "Senegal", "SC": "Seychelles", "SL": "Sierra Leone", "SO": "Somalia",
+      "ZA": "South Africa", "SS": "South Sudan", "SD": "Sudan", "TZ": "Tanzania",
+      "TG": "Togo", "TN": "Tunisia", "UG": "Uganda", "ZM": "Zambia", "ZW": "Zimbabwe"
+    };
+
+    select.onchange = function () {
+      const code = this.value;
+      if (code) {
+        const name = countryNames[code] || "Unknown";
+        result.textContent = `You selected: ${name}`;
+        
+        if (code === "XS") {
+          // Use a custom flag for Somaliland (since it's not ISO listed)
+          flag.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flag_of_Somaliland.svg/320px-Flag_of_Somaliland.svg.png')";
+        } else {
+          flag.style.backgroundImage = `url('https://flagcdn.com/w80/${code.toLowerCase()}.png')`;
+        }
+
+      } else {
+        result.textContent = "";
+        flag.style.backgroundImage = "";
+      }
+    };
+  </script>
+
+</body>
+</html>

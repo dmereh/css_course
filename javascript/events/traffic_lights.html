@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light Simulator</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+      font-family: sans-serif;
+    }
+
+    .traffic-light {
+      width: 80px;
+      background: #333;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .light {
+      width: 50px;
+      height: 50px;
+      margin: 15px auto;
+      border-radius: 50%;
+      background: #111;
+      opacity: 0.3;
+      transition: opacity 0.4s ease;
+    }
+
+    .red.on {
+      background: red;
+      opacity: 1;
+    }
+
+    .yellow.on {
+      background: yellow;
+      opacity: 1;
+    }
+
+    .green.on {
+      background: green;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚦 Traffic Light Simulator</h1>
+
+  <div class="traffic-light">
+    <div class="light red" id="red"></div>
+    <div class="light yellow" id="yellow"></div>
+    <div class="light green" id="green"></div>
+  </div>
+
+  <script>
+    const red = document.getElementById("red");
+    const yellow = document.getElementById("yellow");
+    const green = document.getElementById("green");
+
+    function turnOffAll() {
+      red.classList.remove("on");
+      yellow.classList.remove("on");
+      green.classList.remove("on");
+    }
+
+    function startTrafficLight() {
+      // Initial delay before looping
+      trafficCycle();
+      setInterval(trafficCycle, 6000); // 6-second cycle
+    }
+
+    function trafficCycle() {
+      turnOffAll();
+      red.classList.add("on");
+
+      setTimeout(() => {
+        turnOffAll();
+        green.classList.add("on");
+      }, 2000); // red for 2s
+
+      setTimeout(() => {
+        turnOffAll();
+        yellow.classList.add("on");
+      }, 4000); // green for 2s, then yellow for 2s
+    }
+
+    // Start simulation
+    startTrafficLight();
+  </script>
+
+</body>
+</html>
