@@ -1,7 +1,7 @@
 
 var a= 3
 var b= 2
-a++
+a++ //increment operator - decrement operator would be --
 console.log("the result is ", a)
 
 // console.log("addition ",a+b)
