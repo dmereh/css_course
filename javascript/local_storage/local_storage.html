@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark {
+            background-color: #1e1e1e;
+            color: white;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        select {
+            margin-left: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the LocalStorage Demo</h1>
+    <p>Select your preferences:</p>
+    <label>
+        Select theme:
+        <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <label>
+        Select language:
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </label>
+
+    <script>
+        const themeSelect = document.getElementById("theme");
+        const languageSelect = document.getElementById("language");
+
+        // Load saved preferences
+        const savedTheme = localStorage.getItem("theme");
+        const savedLanguage = localStorage.getItem("language");
+
+        if (savedTheme) {
+            themeSelect.value = savedTheme;
+            applyTheme(savedTheme);
+        }
+
+        if (savedLanguage) {
+            languageSelect.value = savedLanguage;
+        }
+
+        // Apply theme immediately when changed
+        themeSelect.addEventListener("change", () => {
+            const theme = themeSelect.value;
+            localStorage.setItem("theme", theme);
+            applyTheme(theme);
+        });
+
+        // Save language preference
+        languageSelect.addEventListener("change", () => {
+            localStorage.setItem("language", languageSelect.value);
+        });
+
+        function applyTheme(theme) {
+            if (theme === "dark") {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+            }
+        }
+    </script>
+</body>
+</html>
