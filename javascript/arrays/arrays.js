@@ -10,7 +10,7 @@ let studentAges = [30,25,27,28] //create list number
 // studentAges.push(73) //add to the array number
 // students.pop("Deeqa") //remove from the end of the array
 // students.shift("Mahmoud") //remove from the beginning of the array
-// students.unshift("Fatoma")
+// students.unshift("Fatoma") //add to beginning of the array
 // students.splice(1, 0, "Fatoma"); //inserts at index 1 0 = do not replace
 // students.splice(4, 1, "Idil") //inserts at index 4, 1 = replace the index
 // let smallStudents = students.slice(0, 3) //slice from index 0 to 2
