@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Body = () => {
+const Body = (props) => {
   return (
-    <div>Body</div>
+    <div>{props.firstName} {props.surname}</div>
   )
 }
 

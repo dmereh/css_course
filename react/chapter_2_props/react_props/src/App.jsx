@@ -1,20 +1,19 @@
+import React from "react";
+import Profile from "./components3/Profile";
 
-import './App.css'
-import Header from './components/Header'
-import Body from './components/Body'
-import Footer from './components/Footer'
 function App() {
-  
+  const username = "JohnDoe";
+
+  const handleUsernameChange = (newName) => {
+    console.log(`Change requested: ${username} → ${newName}`);
+  };
 
   return (
-    <>
-   <Header/>
-   <Body/>
-   <Footer/>
-   <h1>this is my first react application</h1>
-    </>
-  
-  )
+    <div>
+      <h1>Welcome, {username}!</h1>
+      <Profile username={username} onUsernameChange={handleUsernameChange} />
+    </div>
+  );
 }
 
-export default App
+export default App;
