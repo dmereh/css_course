@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# My Portfolio (Nude Minimal)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small React + Vite portfolio template with a warm nude aesthetic, intended for a junior software developer.
 
-Currently, two official plugins are available:
+## Project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `src/` — React source
+  - `components/` — Header, Hero, Projects, About, Contact, Footer
+  - `pages/` — `Home` (landing) and `Work` (projects/about/contact)
+  - `styles.css` — central theme and layout
+- `index.html` — Vite entry
+- `package.json` — scripts and dependencies
 
-## React Compiler
+## Quick local development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start dev server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open http://localhost:5173
+
+## Production build
+
+```bash
+npm run build
+```
+
+This project uses Vite and TypeScript. The default `build` script will run `tsc -b` (project build) and `vite build` to produce an optimized `dist/` folder.
+
+## Deploying
+
+- **Vercel (recommended for simple React sites)**
+
+  1. Connect your GitHub repo to Vercel.
+  2. Select the project root. Vercel auto-detects Vite projects.
+  3. Build command: `npm run build`
+  4. Output directory: `dist`
+  5. Deploy — Vercel will handle continuous deploys on push.
+
+- **Netlify**
+
+  1. Connect your GitHub repo in Netlify and create a new site.
+  2. Build command: `npm run build`
+  3. Publish directory: `dist`
+  4. Optionally add a `netlify.toml` with functions or redirects.
+
+- **GitHub Pages (manual)**
+  1. Build locally: `npm run build`.
+  2. Serve `dist/` either by committing to `gh-pages` branch or using `actions` to push `dist` to `gh-pages`.
+
+## SPA routing notes
+
+- The app uses `react-router-dom` (BrowserRouter). For Netlify you may need a `_redirects` file with:
+
+```
+/* /index.html 200
+```
+
+or the equivalent `netlify.toml` rule so client-side routing works on refresh.
+
+## Next steps (optional)
+
+- Replace placeholder content (name/email/projects) in `src/components/*` and `src/pages/*`.
+- Replace header anchors with `Link` from `react-router-dom` for SPA navigation.
+- Add `_redirects` or `netlify.toml` for Netlify.
+- Add GitHub Actions or Vercel integration for CI/CD.
+
+If you want, I can add any of the optional items above (Netlify `_redirects`, replacing anchors with `Link`, or automated deploy workflow).

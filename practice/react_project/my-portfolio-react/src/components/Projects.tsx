@@ -1,21 +1,18 @@
-import React from "react";
-
 export default function Projects() {
   return (
     <section id="projects" className="section">
       <h3>Projects</h3>
       <div className="projects-grid">
         <article className="project">
-          <h4>Recipe Finder</h4>
+          <h4>My Portfolio</h4>
           <p className="p">
-            Small search app calling a public API and demonstrating hooks and
-            testing.
+            A personal portfolio website built with React and TypeScript.
           </p>
         </article>
         <article className="project">
-          <h4>Expense Tracker</h4>
+          <h4>Geo Addressing Project</h4>
           <p className="p">
-            Simple expense tracker with charts and local storage.
+            Contributing to projects led by my internship at LuulSolutions
           </p>
         </article>
       </div>
