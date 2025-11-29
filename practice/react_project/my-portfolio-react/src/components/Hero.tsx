@@ -1,3 +1,4 @@
+
 export default function Hero() {
   return (
     <div className="hero">
@@ -6,7 +7,7 @@ export default function Hero() {
           My Journey into Tech
         </h1>
         <p className="journey-text">
-{`When I look back on the challenges I’ve faced in my adult life, this one has been the most exciting and equally the most terrifying! 
+          {`When I look back on the challenges I’ve faced in my adult life, this one has been the most exciting and equally the most terrifying! 
 
 After spending more than ten years working in HR across various NHS trusts, I had become comfortable, too comfortable. 
 For someone who thrives on change and growth, that comfort eventually felt limiting. 
@@ -44,10 +45,10 @@ And that’s exactly why I’m creating this project today: to prove to myself t
 This portfolio is more than just a collection of work. It’s a reminder to believe in myself, to embrace the errors, and to keep pushing forward because every challenge is an opportunity to grow.`}
         </p>
 
-        <br/>
-        <br/>
+        <br />
+        <br />
 
-         <div className="cta">
+        <div className="cta">
           <a className="btn" href="#projects">
             View projects
           </a>
@@ -61,9 +62,7 @@ This portfolio is more than just a collection of work. It’s a reminder to beli
           <div className="projects-grid">
             <article className="project">
               <h4>Portfolio site - Share this page with others!</h4>
-              <p className="p">
-                Insert website URL
-              </p>
+              <p className="p">Insert website URL</p>
             </article>
             <article className="project">
               <h4>Task Manager</h4>
@@ -85,8 +84,10 @@ This portfolio is more than just a collection of work. It’s a reminder to beli
       </main>
 
       <aside className="sidebar-card" aria-label="Profile">
-        <div className="profile-pic">profile image</div>
+        {" "}
+        <div className="profile-pic">profile image</div>{" "}
         <div style={{ marginTop: 12 }}>
+          {" "}
           <strong>Skills</strong>
           <div style={{ marginTop: 8, color: "var(--muted)" }}>
             React · TypeScript · HTML · CSS · Git · TailwindCSS · JavaScript ·
